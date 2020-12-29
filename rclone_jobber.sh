@@ -66,7 +66,7 @@ print_message()
 }
 
 ############################### healthchecks.io ###############################
-if [[ "$monitoring_url" = *"hc-ping.com"* ]]; then hc=true
+if [ "$monitoring_url" = "*hc-ping.com*" ]; then hc=true
     else hc=false
 fi
 
@@ -91,7 +91,7 @@ fi
 
 # if job is already running (maybe previous run didn't finish)
 # https://github.com/wolfv6/rclone_jobber/pull/9 said this is not working in macOS
-if [[ $(pidof -x "$(basename "$0")" -o %PPID) ]]; then
+if [ $(pidof -x "$(basename "$0")" -o %PPID) ]; then
     print_message "WARNING" "aborted - process already running."
     exit 1
 fi
