@@ -66,7 +66,7 @@ print_message()
 }
 
 ############################### healthchecks.io ###############################
-if [[ "$monitoring_url" = *"hc.io"* ]]; then hc=true
+if [[ "$monitoring_url" = *"hc-ping.com"* ]]; then hc=true
     else hc=false
 fi
 
